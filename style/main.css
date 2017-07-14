@@ -3,27 +3,46 @@
   padding: 0;
   outline: none !important;
   outline-width: 0 !important;
-  position: relative; }
+  position: relative;
+  box-sizing: border-box; }
 
 html,
 body {
   width: 100%;
   height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: lightgrey; }
 
 .main.container {
-  width: 60%;
+  width: 65%;
   height: 100%;
-  margin-left: 20%; }
+  margin-left: 17.5%;
+  background-color: #ededed;
+  padding: 2.5%; }
   .main.container .token.container {
     width: 100%;
-    max-height: 50%;
-    overflow: hidden; }
+    height: 40%;
+    overflow: hidden;
+    cursor: pointer; }
     .main.container .token.container .img {
       background: url("../chimp.jpg");
-      background-size: contain;
+      background-size: cover;
       height: 100%;
       width: 100%; }
+      .main.container .token.container .img.ready {
+        border: 5px solid #1aaf1a; }
+        .main.container .token.container .img.ready:after {
+          content: "";
+          display: inline-block;
+          background-image: url("../check_mark.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 4rem;
+          height: 4rem;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%); }
     .main.container .token.container h1 {
       color: white;
       text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -32,38 +51,46 @@ body {
       bottom: 0;
       width: 100%;
       margin-bottom: 1rem;
-      font-size: 3rem; }
+      font-size: 4rem;
+      font-variant: small-caps;
+      font-weight: bold; }
   .main.container .tags.container {
     width: 100%;
     height: 50%; }
-    .main.container .tags.container label {
-      text-align: center;
-      font-size: 2rem;
+    .main.container .tags.container .checkbox {
+      color: #000041;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 35%;
+      width: 100%;
+      margin: 2.5% 0;
+      background-color: #9dd0e1;
+      border-radius: 7px;
+      border: 5px solid #5354FF;
+      cursor: pointer;
+      font-size: 3rem;
       font-family: sans-serif;
-      color: black;
-      height: 28%;
-      width: 100%;
-      display: block;
-      margin: 1rem 0;
-      line-height: 100%; }
-      .main.container .tags.container label span {
-        margin-top: 50%;
-        transform: translateY(-50%); }
-    .main.container .tags.container input {
-      display: block;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      text-align: center;
-      font-size: 2rem;
-      line-height: 28%;
-      border-radius: 5px;
-      border: 5px solid blue;
-      background-color: lightblue;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      z-index: -1; }
-      .main.container .tags.container input:hover {
-        background-color: blue; }
+      font-weight: bold;
+      letter-spacing: 0.3rem;
+      text-transform: lowercase; }
+      .main.container .tags.container .checkbox:hover {
+        background-color: #5354FF; }
+      .main.container .tags.container .checkbox.checked {
+        color: #004100;
+        background-color: lightgreen;
+        border-color: #1aaf1a; }
+        .main.container .tags.container .checkbox.checked:hover {
+          background-color: #1aaf1a; }
+        .main.container .tags.container .checkbox.checked:after {
+          content: "";
+          display: inline-block;
+          background-image: url("../check_mark.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 4rem;
+          height: 4rem;
+          position: absolute;
+          left: 3rem;
+          top: 50%;
+          transform: translateY(-50%); }

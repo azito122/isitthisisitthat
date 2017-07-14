@@ -9,24 +9,21 @@
 		<div class="token container">
 			
 			<div class="img"></div>
-			<h1>Chimpanzee</h1>
+			<h1>A Chimpanzee</h1>
 
 		</div>
 
 		<div class="tags container">
 
-			<label>
-				<span>Test 1</span>
-				<input type="checkbox" name="tags" value="">
-				</label>
-			<label>
-				<span>Test 2</span>
-				<input type="checkbox" name="tags" value="">
-				</label>
-			<label>
-				<span>Test 3</span>
-				<input type="checkbox" name="tags" value="">
-				</label>
+			<div class="checkbox">
+				<span>An animal</span>
+				</div>
+			<div class="checkbox">
+				<span>Eaten by people</span>
+				</div>
+			<div class="checkbox">
+				<span>Red</span>
+				</div>
 
 		</div>
 
